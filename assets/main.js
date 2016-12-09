@@ -11,10 +11,16 @@ $(function() {
 
     var $badges = $('#badges');
 
-    courses.forEach(function(courses) {
-      $('<div />', {
+    courses.forEach(function(course) {
+
+      var $course = $('<div />', {
         'class': 'course'
       }).appendTo($badges);
+
+      $('<h3 />', {
+        text: course.title
+      }).appendTo($course);
+
     })
   }
 
